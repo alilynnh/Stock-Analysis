@@ -8,11 +8,7 @@ The purpose of this project was to modify the previous VBA code in order to anal
 
 ## Results
 ### Refactoring
-The first step in this project was to make three output arrays to hold the calculated annual volumes, starting prices, and ending prices for each stock. The ticker array created in the previous project was used to create a ticker symbol that can be used for each stock. A variable called "tickerIndex" was created in order to match the output arrays with the ticker array. 
-
-Next, a Nested For Loop was written that cycled through the rows in the spreadsheet in order to calculate the outputs for each stock. 
-
-The refactored code and the original code can be seen below (excluding code used for formatting).
+The first step in this project was to make three output arrays to hold the calculated annual volumes, starting prices, and ending prices for each stock. The ticker array created in the previous project was used to create a ticker identifier to be used for each stock. A variable called "tickerIndex" was created in order to match the output arrays with the ticker array. Next, a Nested For Loop was written that cycled through the rows in the spreadsheet in order to calculate the outputs for each stock. The refactored code and the original code can be seen below (excluding code used for formatting).
 
 ***Original***
 ```
@@ -230,7 +226,7 @@ There is a stark difference between the performance of the stocks in 2017 and 20
 ![](Resources/Table_2018.png)
 
 ### Run Time
-Using the new code, the run time for the analysis was significantly shorter for both years. The run time decreased from 1.125 seconds to 0.3359 seconds for 2017, and decreased from 1.0625 seconds to .29688 seconds for 2018. The timer message boxes are below. 
+Using the new code, the run time for the analysis was significantly shorter for both years. The run time decreased from 1.125 seconds to 0.3359375 seconds for 2017, and decreased from 1.0625 seconds to .296875 seconds for 2018. The timer message boxes are below. 
 
 ***Original 2017***
 ![](Resources/Original_2017.png)
@@ -245,3 +241,8 @@ Using the new code, the run time for the analysis was significantly shorter for 
 ![](Resources/VBA_Challenge_2018.png)
 
 ## Summary
+### Advantages of Refactoring
+The clear advantage of refactoring code is an increase in efficiency/speed at which it can perform analyses. In this project, there was a 79% and 77% increase in speed for 2017 and 2018, respectively. While the difference for the current data was only about .8 seconds, that difference would be much more noticable on a data set that had tens of thousands of rows.  
+
+### Disadvantages of Refactoring
+A disadvantage of refactoring is that an indiviudal may break a code that previously worked. Because of this, during this project a copy of the original code was kept in order to compare outputs, and the new code was saved frequently in order to return to previous versions if a mistake was made.  
